@@ -1,0 +1,26 @@
+@media(max-width:500px){
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translate(0%, -15%);
+}
+
+.home .right-s{
+    padding-left:3rem;
+} 
+.top-cards {
+    margin-top: 5rem;
+}
+
+.h1{
+
+    transform: translate(0%, -120%);
+}
+    .bottom-cards{
+        margin-top: 15rem;
+    }
+}
+
+

@@ -1,0 +1,16 @@
+
+  .down-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:hsl(163, 72%, 41%);
+    }
+  .down-up img{
+        padding-right: 5px;
+    }
+ .down-up small{
+        font-weight: 700;
+    }
+ .down-up .red {
+    color: hsl(356, 69%, 56%);
+    }
