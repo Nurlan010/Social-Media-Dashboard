@@ -1,8 +1,10 @@
 const checkbox = document.querySelector('#checkbox');
 const home = document.querySelector('#dark');
 const h1 = document.querySelector('#h1')
-let topDark = document.querySelectorAll('.card');
-let bottomDark = document.querySelectorAll('.card2');
+const topDark = document.querySelectorAll('.card');
+const bottomDark = document.querySelectorAll('.card2');
+const counter = document.querySelectorAll('.counter');
+
 
 checkbox.addEventListener('change', ()=>{
 document.body.classList.toggle('dark');
@@ -11,7 +13,7 @@ h1.classList.toggle('dark');
 
 for(let i=0; i<topDark.length; i++){
 topDark[i].classList.toggle('dark');
-console.log(topDark);
+
 };
 
 for(let j=0; j<bottomDark.length; j++){
@@ -19,3 +21,21 @@ for(let j=0; j<bottomDark.length; j++){
 };
 
 });
+
+counter.forEach((counter) =>{
+    counter.innerText = "0";
+
+    const updateCounter = () => {
+        const target = +counter.getAttribute("data-target");
+        const c = +counter.innerText;
+
+        const increment = target/200;
+
+        if(c < target){
+            counter.innerText = `${Math.ceil(c + increment)}`;
+            setTimeout(updateCounter, 1);
+        }
+    }
+
+    updateCounter();
+})
